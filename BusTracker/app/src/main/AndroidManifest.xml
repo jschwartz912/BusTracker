@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="juniordesignteam25.bustracker">
+
+    <permission
+        android:name="com.javapapers.currentlocationinmap.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.javapapers.currentlocationinmap.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCQd8EjjQr1Zf2jiop2e_fPFV1kAVdfaZE" />
+        <!-- Nicolette's API key -->
+        <!--
+            <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBsKiFlveymQT606D1FVduBaNvF67UewbY"/>
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".loginPage"
+            android:label="@string/title_activity_login_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ViewNotificationsActivityNotUsedAnymore"
+            android:label="@string/title_activity_view_notifications"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".notificationCreatorService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".SignupActivity"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NotificationHomeActivity"
+            android:label="@string/title_activity_notification_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddLocationsActivity"
+            android:label="@string/title_activity_add_locations"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddEventsActivity"
+            android:label="@string/title_activity_add_events"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ImportScheduleActivity"></activity>
+    </application>
+
+</manifest>

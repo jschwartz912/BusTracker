@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="juniordesignteam25.bustracker.AddNotificationActivity">
+
+    <RelativeLayout android:layout_height="match_parent"
+        android:layout_width="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="Name"
+        android:layout_below="@id/appbar"
+        android:paddingTop="35dp"
+        android:paddingRight="50dp"
+        android:paddingLeft="5dp"
+        android:textSize="20dp"
+        />
+    <EditText
+        android:id="@+id/nameValue"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/appbar"
+        android:layout_toRightOf="@id/name"
+        android:paddingTop="30dp"/>
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="Start \nLocation"
+        android:layout_below="@id/name"
+        android:paddingTop="20dp"
+        android:paddingRight="25dp"
+        android:paddingLeft="5dp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/startValue"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/start"
+        android:paddingTop="30dp"/>
+
+    <TextView
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="End \nLocation"
+        android:layout_below="@id/start"
+        android:paddingTop="20dp"
+        android:paddingRight="25dp"
+        android:paddingLeft="5dp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/endValue"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/start"
+        android:layout_toRightOf="@id/end"
+        android:paddingTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="Time"
+        android:layout_below="@id/end"
+        android:paddingTop="20dp"
+        android:paddingLeft="5dp"
+        android:textSize="20dp"
+        android:id="@+id/timeText" />
+
+        <include layout="@layout/content_add_notification" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Days"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/timeText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="50dp"
+            android:paddingRight="50dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:id="@+id/mondayBox"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:textSize="20dp"
+            android:paddingRight="5dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:id="@+id/tuesdayBox"
+            android:layout_alignBottom="@+id/mondayBox"
+            android:layout_toRightOf="@+id/mondayBox"
+            android:layout_toEndOf="@+id/mondayBox"
+            android:textSize="20dp"
+            android:paddingRight="5dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:id="@+id/wednesdayBox"
+            android:layout_alignBottom="@+id/tuesdayBox"
+            android:layout_toRightOf="@+id/tuesdayBox"
+            android:layout_toEndOf="@+id/tuesdayBox"
+            android:textSize="20dp"
+            android:paddingRight="5dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Th"
+            android:id="@+id/thursdayBox"
+            android:layout_alignBottom="@+id/wednesdayBox"
+            android:layout_toRightOf="@+id/wednesdayBox"
+            android:layout_toEndOf="@+id/wednesdayBox"
+            android:textSize="20dp"
+            android:paddingRight="5dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F"
+            android:id="@+id/fridayBox"
+            android:layout_alignBottom="@+id/thursdayBox"
+            android:layout_toRightOf="@+id/thursdayBox"
+            android:layout_toEndOf="@+id/thursdayBox"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Notification"
+            android:id="@+id/addNotificationButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="true" />
+
+        <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timePicker"
+            android:timePickerMode="spinner"
+            android:layout_below="@+id/endValue"
+            android:layout_alignLeft="@+id/addNotificationButton"
+            android:layout_alignStart="@+id/addNotificationButton"
+            android:layout_above="@+id/mondayBox"
+            android:clickable="true" />
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

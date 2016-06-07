@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Bus Tracker</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login_page">loginPage</string>
+    <string name="title_activity_export_schedule">ExportScheduleActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_view_notifications">ViewNotificationsActivity</string>
+    <string name="title_activity_add_notification">AddNotificationActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_signup">SignupActivity</string>
+    <string name="title_activity_notification_home">NotificationHomeActivity</string>
+    <string name="title_activity_add_locations">AddLocationsActivity</string>
+    <string name="title_activity_add_events">AddEventsActivity</string>
+</resources>
